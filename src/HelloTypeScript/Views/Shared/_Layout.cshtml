@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - HelloTypeScript</title>
+
+    <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js"></script>
+    <script src="~/lib/systemjs/system.js"></script>
+    <script type="text/javascript">
+        System.config({
+            baseURL: "/",
+            packages: {
+                "": {
+                    defaultExtension: "js"
+                }
+            },
+            typescriptOptions: {
+                tsconfig: true
+            },
+            paths: {
+                "jquery": "/lib/jquery/jquery.min.js"
+            }
+        });
+        System.import("js/main")
+            .then(null, console.error.bind(console));
+    </script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

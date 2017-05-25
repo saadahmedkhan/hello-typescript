@@ -1,0 +1,1 @@
+{"version":3,"file":"main.js","sourceRoot":"","sources":["../../Client/main.ts"],"names":[],"mappings":";AAAA,iCAA+B;AAE/B,CAAC,CAAC;IAEE,IAAI,WAAW,GAAG,IAAI,YAAI,EAAE,CAAC;IAC7B,WAAW,CAAC,GAAG,EAAE,CAAC;AACtB,CAAC,CAAC,CAAC","sourcesContent":["import { Post } from \"./posts\";\r\n\r\n$(function ()\r\n{\r\n    let postService = new Post();\r\n    postService.get();\r\n});"]}
